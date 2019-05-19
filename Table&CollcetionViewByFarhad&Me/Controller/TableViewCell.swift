@@ -18,10 +18,10 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        //imageCell.layer.cornerRadius = 7
-        //imageCell.layer.borderWidth = 3
-        //imageCell.layer.borderColor = UIColor.white.cgColor
-        //imageCell.clipsToBounds = true
+        imageCell.layer.cornerRadius = 20
+        imageCell.layer.borderWidth = 3
+        imageCell.layer.borderColor = UIColor.white.cgColor
+        imageCell.clipsToBounds = true
         // Initialization code
     }
 

@@ -10,12 +10,13 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
+    var myIndex : Int = 0
 
     @IBOutlet weak var myTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Foods"
         myTableView.delegate = self
         myTableView.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,6 +35,18 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 180
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "Segue", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destiation = segue.destination as! SecondViewController
+        destiation.indexCollectionView = myIndex
     }
 
 
