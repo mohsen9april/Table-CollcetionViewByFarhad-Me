@@ -13,9 +13,13 @@ struct DataCollection {
     
     var imageCollection : String
     var labelCollection : String
+    var price: String
+    var description: String
     
-    init(imageCollection: String, labelCollection: String) {
+    init(imageCollection: String, labelCollection: String, price: String, description: String) {
         self.imageCollection = imageCollection
         self.labelCollection = labelCollection
+        self.price = price
+        self.description = description
     }
 }

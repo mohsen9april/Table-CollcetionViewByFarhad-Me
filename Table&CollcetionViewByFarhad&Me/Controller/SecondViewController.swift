@@ -51,22 +51,32 @@ class SecondViewController: UIViewController, UICollectionViewDataSource, UIColl
             self.title = "BURGERS"
             cell.imageCollectionVC.image = UIImage(named: DataBank.init().Burgres[indexPath.row].imageCollection)
             cell.labelCollectionVC.text = DataBank.init().Burgres[indexPath.row].labelCollection
+            cell.labelPrice.text = DataBank.init().Burgres[indexPath.row].price
+            cell.labelDescription.text = DataBank.init().Burgres[indexPath.row].description
         } else if indexCollectionView == 1 {
             self.title = "PASTA"
             cell.imageCollectionVC.image = UIImage(named: DataBank.init().Pasta[indexPath.row].imageCollection)
             cell.labelCollectionVC.text = DataBank.init().Pasta[indexPath.row].labelCollection
+            cell.labelPrice.text = DataBank.init().Pasta[indexPath.row].price
+            cell.labelDescription.text = DataBank.init().Pasta[indexPath.row].description
         } else if indexCollectionView == 2 {
             self.title = "PIZZA"
             cell.imageCollectionVC.image = UIImage(named: DataBank.init().Pizza[indexPath.row].imageCollection)
             cell.labelCollectionVC.text = DataBank.init().Pizza[indexPath.row].labelCollection
+            cell.labelPrice.text = DataBank.init().Pizza[indexPath.row].price
+            cell.labelDescription.text = DataBank.init().Pizza[indexPath.row].description
         } else if indexCollectionView == 3 {
             self.title = "SALAD"
             cell.imageCollectionVC.image = UIImage(named: DataBank.init().Salad[indexPath.row].imageCollection)
             cell.labelCollectionVC.text = DataBank.init().Salad[indexPath.row].labelCollection
+            cell.labelPrice.text = DataBank.init().Salad[indexPath.row].price
+            cell.labelDescription.text = DataBank.init().Salad[indexPath.row].description
         } else {
             self.title = "SANDWICH"
             cell.imageCollectionVC.image = UIImage(named: DataBank.init().Sandwich[indexPath.row].imageCollection)
             cell.labelCollectionVC.text = DataBank.init().Sandwich[indexPath.row].labelCollection
+            cell.labelPrice.text = DataBank.init().Sandwich[indexPath.row].price
+            cell.labelDescription.text = DataBank.init().Sandwich[indexPath.row].description
         }
         return cell
     }

@@ -13,6 +13,9 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageCollectionVC: UIImageView!
     @IBOutlet weak var labelCollectionVC: UILabel!
+    @IBOutlet weak var labelPrice: UILabel!
+    
+    @IBOutlet weak var labelDescription: UILabel!
     
     override func awakeFromNib() {
         imageCollectionVC.layer.cornerRadius = 10
